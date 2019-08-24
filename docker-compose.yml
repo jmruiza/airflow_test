@@ -1,0 +1,10 @@
+version: '3'
+services:
+  airflow:
+    container_name: "airflow_test"
+    image: puckel/docker-airflow
+    build: .
+    ports:
+    - "8080:8080"
+    volumes:
+    - ./dags:/usr/local/airflow/dags
